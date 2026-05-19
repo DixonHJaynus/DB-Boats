@@ -1,0 +1,45 @@
+-- ============================================================
+-- DB-Boats Required Items
+-- Add these to your rsg-core/shared/items.lua
+-- ============================================================
+
+-- Certificate of Ownership (given when purchasing a boat)
+['boat_certificate'] = {
+    name = 'boat_certificate',
+    label = 'Certificate of Ownership',
+    weight = 0,
+    type = 'item',
+    image = 'boat_certificate.png',
+    unique = true,
+    useable = true,
+    shouldClose = true,
+    description = 'An official certificate of boat ownership.',
+},
+
+-- Boat Repair Kit (used to repair hull damage on the water)
+['boat_repair_kit'] = {
+    name = 'boat_repair_kit',
+    label = 'Boat Repair Kit',
+    weight = 500,
+    type = 'item',
+    image = 'boat_repair_kit.png',
+    unique = false,
+    useable = false,
+    shouldClose = false,
+    description = 'A kit containing materials to repair boat hull damage.',
+},
+
+-- Coal (used as fuel for steam-powered boats)
+-- NOTE: If your server already has coal as an item, skip this.
+-- Make sure the item name matches Config.CoalItem in config.lua
+['coal'] = {
+    name = 'coal',
+    label = 'Coal',
+    weight = 200,
+    type = 'item',
+    image = 'coal.png',
+    unique = false,
+    useable = false,
+    shouldClose = false,
+    description = 'A lump of coal. Can be used to fuel steam-powered boats.',
+},
