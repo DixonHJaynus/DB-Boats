@@ -1,0 +1,21 @@
+CREATE TABLE IF NOT EXISTS `db_boats` (
+    `id` INT(11) NOT NULL AUTO_INCREMENT,
+    `citizenid` VARCHAR(50) NOT NULL,
+    `owner_name` VARCHAR(100) NOT NULL,
+    `boat_model` VARCHAR(50) NOT NULL,
+    `boat_label` VARCHAR(100) NOT NULL,
+    `registration_number` VARCHAR(20) NOT NULL UNIQUE,
+    `purchase_location` VARCHAR(100) NOT NULL,
+    `marina_id` VARCHAR(50) NOT NULL,
+    `stored` TINYINT(1) NOT NULL DEFAULT 1,
+    `fuel` FLOAT NOT NULL DEFAULT 100.0,
+    `durability_current` FLOAT NOT NULL DEFAULT 100.0,
+    `upgrade_speed` INT(11) NOT NULL DEFAULT 0,
+    `upgrade_durability` INT(11) NOT NULL DEFAULT 0,
+    `upgrade_fuel` INT(11) NOT NULL DEFAULT 0,
+    `purchase_date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `last_used` TIMESTAMP NULL DEFAULT NULL,
+    PRIMARY KEY (`id`),
+    INDEX `idx_citizenid` (`citizenid`),
+    INDEX `idx_registration` (`registration_number`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
