@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DB-Boats Certificate</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div id="certificate-container" class="hidden">
+        <div class="certificate">
+            <div class="cert-header">
+                <div class="cert-seal">
+                    <i class="fa-solid fa-anchor"></i>
+                </div>
+                <h1 id="cert-title">Certificate of Boat Ownership</h1>
+                <p class="cert-subtitle" id="cert-subtitle">Official Maritime Registration</p>
+                <div class="cert-divider"></div>
+            </div>
+
+            <div class="cert-body">
+                <div class="cert-section">
+                    <div class="cert-field">
+                        <label><i class="fa-solid fa-user"></i> Owner Name</label>
+                        <span id="cert-owner">---</span>
+                    </div>
+                    <div class="cert-field">
+                        <label><i class="fa-solid fa-hashtag"></i> Registration Number</label>
+                        <span id="cert-registration" class="registration-number">---</span>
+                    </div>
+                </div>
+
+                <div class="cert-section">
+                    <div class="cert-field">
+                        <label><i class="fa-solid fa-ship"></i> Vessel</label>
+                        <span id="cert-vessel">---</span>
+                    </div>
+                    <div class="cert-field">
+                        <label><i class="fa-solid fa-location-dot"></i> Purchase Location</label>
+                        <span id="cert-location">---</span>
+                    </div>
+                    <div class="cert-field">
+                        <label><i class="fa-solid fa-calendar"></i> Purchase Date</label>
+                        <span id="cert-date">---</span>
+                    </div>
+                </div>
+
+                <div class="cert-divider-thin"></div>
+
+                <div class="cert-section">
+                    <h3 class="section-title"><i class="fa-solid fa-wrench"></i> Current Upgrade Levels</h3>
+                    
+                    <div class="upgrade-row">
+                        <div class="upgrade-label">
+                            <i class="fa-solid fa-gauge-high"></i> Speed
+                        </div>
+                        <div class="upgrade-bar-container">
+                            <div class="upgrade-bar" id="upgrade-speed-bar"></div>
+                        </div>
+                        <div class="upgrade-level" id="upgrade-speed-text">0/5</div>
+                    </div>
+
+                    <div class="upgrade-row">
+                        <div class="upgrade-label">
+                            <i class="fa-solid fa-shield"></i> Durability
+                        </div>
+                        <div class="upgrade-bar-container">
+                            <div class="upgrade-bar" id="upgrade-durability-bar"></div>
+                        </div>
+                        <div class="upgrade-level" id="upgrade-durability-text">0/5</div>
+                    </div>
+
+                    <div class="upgrade-row">
+                        <div class="upgrade-label">
+                            <i class="fa-solid fa-fire"></i> Fuel Efficiency
+                        </div>
+                        <div class="upgrade-bar-container">
+                            <div class="upgrade-bar" id="upgrade-fuel-bar"></div>
+                        </div>
+                        <div class="upgrade-level" id="upgrade-fuel-text">0/5</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cert-footer">
+                <div class="cert-stamp">
+                    <i class="fa-solid fa-certificate"></i>
+                    <span>CERTIFIED</span>
+                </div>
+                <p class="cert-footer-text">This document certifies lawful ownership of the above described vessel.</p>
+            </div>
+
+            <button class="cert-close-btn" onclick="closeCertificate()">
+                <i class="fa-solid fa-times"></i> Close
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
